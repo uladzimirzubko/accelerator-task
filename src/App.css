@@ -1,0 +1,131 @@
+.sessions-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px 20px;
+  text-align: left;
+}
+
+.sessions-workspace__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sessions-workspace__header h1 {
+  margin: 0;
+}
+
+.button {
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.button:hover:not(:disabled) {
+  border-color: var(--accent-border);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button--secondary {
+  color: var(--text);
+  background: transparent;
+  border-color: var(--border);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.field input,
+.field select {
+  font: inherit;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.field-error {
+  color: var(--danger);
+  font-size: 14px;
+  margin: 0;
+}
+
+.create-session-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.create-session-form__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.session-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.session-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.session-list__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.session-list__status {
+  font-size: 13px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--code-bg);
+  color: var(--text-h);
+  text-transform: capitalize;
+}
+
+.session-list__empty,
+.session-list__loading {
+  color: var(--text);
+}
+
+.session-list__error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--danger);
+}
